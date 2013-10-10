@@ -1,0 +1,62 @@
+div#frame {
+    width: 700px;
+    border: 3px ridge #1578bd;
+    margin: 0 auto;
+    font-family: Arial;
+    font-size: 14px;
+    background-image: url('../images/background_image.jpg');
+}
+
+table#storage {
+    width: 100%;
+    text-align: center;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    margin-bottom: 5px;
+    margin-top: 0;
+    padding: 15px 5px;
+    background-color: transparent;
+}
+
+table#storage tr#storage_title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+table#storage tr.input_row,
+table#storage tr label{
+    display: none;
+}
+
+table#storage input {
+    text-align: center;
+    font-family: Arial;
+    font-size: 14px; 
+}
+
+table#storage input[type="text"] {
+    width: 130px;
+    border: 1px solid #1578bd;
+    border-radius: 3px;
+}
+
+table#storage input {
+    text-align: center;
+    font-family: Arial;
+    font-size: 14px;
+}
+
+a:link {
+    color: #0084e0;
+}
+
+a:visited {
+    color: #0084e0;
+}
+
+a:hover {
+    color: #000000;
+}
+
+
+
