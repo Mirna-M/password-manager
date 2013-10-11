@@ -11,7 +11,7 @@ CREATE TABLE users (
 
 CREATE TABLE user_data (
     user_data_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    user_data_user id INT UNSIGNED NOT NULL,
+    user_data_user_id INT UNSIGNED NOT NULL,
     user_data_for VARCHAR(50) NOT NULL,
     user_data_name VARCHAR(50) NOT NULL,
     user_data_password TEXT NOT NULL,
