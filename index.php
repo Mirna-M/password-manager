@@ -18,14 +18,20 @@ if($connect === false) {
 
 if(isset($_GET['where']) && ($_GET['where'] === 'login')) {
     if(isset($_POST['user_name']) && isset($_POST['password'])) {
-        $result = select_to_array('SELECT user_id FROM users WHERE user_login = 
+        $_POST['user_name'] = trim($_POST['user_name']);
+        $_POST['password'] = trim($_POST['password']);
+        if($_POST['user_name'] !='' && $_POST['password']) {
+            $result = select_to_array('SELECT user_id FROM users WHERE user_login = 
             "'.$_POST['user_name'].'" AND user_pass = "'.md5($_POST['password']).'"');
-        if(count($result) > 0) {
-            $_SESSION['current_user_id'] = $result[0]['user_id'];
-            header('Location: index.php');
-            exit;
+            if(count($result) > 0) {
+                $_SESSION['current_user_id'] = $result[0]['user_id'];
+                header('Location: index.php');
+                exit;
+            } else {
+                $tpl->message = 'Login process failed. Please try again.';
+            }
         } else {
-            $tpl->message = 'Login process failed. Please try again later.';
+            $tpl->message = 'All fields are required.';
         }
     }
     $tpl->display('template/login_form.tpl.php');
@@ -35,17 +41,27 @@ if(isset($_GET['where']) && ($_GET['where'] === 'login')) {
 if(isset($_GET['where']) && ($_GET['where'] === 'register')) {
     if(isset($_POST['user_name']) && isset($_POST['password'])
     && isset($_POST['reenter_password'])) {
-        if($_POST['password'] === $_POST['reenter_password']) {
-            $result = add_user(
+        $_POST['user_name'] = trim($_POST['user_name']);
+        $_POST['password'] = trim($_POST['password']);
+        $_POST['reenter_password'] = trim($_POST['reenter_password']);
+        if ($_POST['user_name'] !='' && $_POST['password'] !=''
+            && $_POST['reenter_password'] !='') {
+            if($_POST['password'] === $_POST['reenter_password']) {
+                $result = add_user(
                 $_POST['user_name'],
                 $_POST['password']            
-            );
-            if($result === true) {
-                header('Location: index.php?where=login');
+                );
+                if($result === true) {
+                    header('Location: index.php?where=login');
                 exit;
+                } else {
+                    $tpl->message = 'Registration process failed. Please try again later.';
+                }
             } else {
-                $tpl->message = 'Registration process failed. Please try again later.';
+                $tpl->message = 'Password and retype password don\' t match.';
             }
+        } else {
+            $tpl->message = 'All fields are required.';
         }
     }
     $tpl->display('template/registration_form.tpl.php');
@@ -53,6 +69,12 @@ if(isset($_GET['where']) && ($_GET['where'] === 'register')) {
 }
 
 if(!isset($_SESSION['current_user_id'])) {
+    header('Location: index.php?where=login');
+    exit;
+}
+
+if(isset($_GET['where']) && ($_GET['where'] === 'logout')) {
+    session_destroy();
     header('Location: index.php?where=login');
     exit;
 }

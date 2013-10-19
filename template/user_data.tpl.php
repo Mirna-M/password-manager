@@ -10,11 +10,19 @@
     <body>
         <div id=frame>
             <table id=storage>
-                <tr id=storage_title>
-                    <td>DATA FOR</td>
-                    <td>USER NAME</td>
-                    <td>USER PASSWORD</td>
-                    <td>MODIFY</td>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <a href="index.php?where=logout">Log out</a>
+                    </td>
+                </tr>
+                <tr class=title>
+                    <td class="title" >DATA FOR</td>
+                    <td class="title" >USER NAME</td>
+                    <td class="title" >USER PASSWORD</td>
+                    <td class="title" >MODIFY</td>
                 </tr>
                 <?php foreach ($this->rows as $row): ?>
                 <tr class="row" user-data-id="<?php echo $row['user_data_id']; ?>">

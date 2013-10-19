@@ -1,15 +1,23 @@
+body {
+    background-image: url('../images/login_background_repeatx.jpg');
+    background-repeat: repeat-x;
+    font-family: Ubuntu;
+    font-size: 16px;
+}
+
 div#frame {
-    width: 700px;
-    border: 3px ridge #1578bd;
+    width: 900px;
     margin: 0 auto;
-    font-family: Arial;
-    font-size: 14px;
-    background-image: url('../images/background_image.jpg');
+}
+
+div.align_right {
+    text-align: right;
 }
 
 table#storage {
     width: 100%;
     text-align: center;
+    color: #1D3546;
     margin-left: 0 auto;
     margin-right: 0 auto;
     margin-bottom: 5px;
@@ -18,9 +26,19 @@ table#storage {
     background-color: transparent;
 }
 
-table#storage tr#storage_title {
-    font-size: 16px;
+table#storage tr.title {
+    font-size: 20px;
+    color: #1750A4;
     font-weight: bold;
+}
+
+table#storage td.title {
+    padding-bottom: 20px;
+    padding-top: 5px;
+}
+
+table#storage td {
+    padding-bottom: 10px;
 }
 
 table#storage tr.input_row,
@@ -30,20 +48,19 @@ table#storage tr label{
 
 table#storage input {
     text-align: center;
-    font-family: Arial;
-    font-size: 14px; 
+    font-family: 'Ubuntu';
+    font-size: 16px;
+    color: #1D3546;
+    border: 2px ridge #1578bd;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 2px 0px #1578bd;
+    -moz-box-shadow: 0px 2px 0px #1578bd;
+    box-shadow: 0px 2px 0px #1578bd;
 }
 
 table#storage input[type="text"] {
-    width: 130px;
-    border: 1px solid #1578bd;
-    border-radius: 3px;
-}
-
-table#storage input {
-    text-align: center;
-    font-family: Arial;
-    font-size: 14px;
+    width: 230px;
+    height: 40px;
 }
 
 a:link {
