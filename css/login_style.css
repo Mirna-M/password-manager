@@ -60,7 +60,7 @@ div#login_wrraper form input[type="password"] {
 div#login_wrraper form input[type="submit"] {
     width: 80px;
     height: 40px;
-    background-image: url('../images/button_hover1.jpg');
+    background-image: url('../images/button.jpg');
 }
 
 div#login_wrraper form input[type="submit"]:hover {
