@@ -2,6 +2,7 @@
     <head>
         <link rel="stylesheet" type="text/css" media="screen" href="css/register_style.css"/>
         <title>Password Manager - Register</title>
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <div class="page_wrraper">

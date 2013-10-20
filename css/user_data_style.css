@@ -1,7 +1,7 @@
 body {
     background-image: url('../images/login_background_repeatx.jpg');
     background-repeat: repeat-x;
-    font-family: Ubuntu;
+    font-family: Ubuntu, Arial, sans-serif;
     font-size: 16px;
 }
 
@@ -48,7 +48,7 @@ table#storage tr label{
 
 table#storage input {
     text-align: center;
-    font-family: 'Ubuntu';
+    font-family: Ubuntu, Arial, sans-serif;
     font-size: 16px;
     color: #1D3546;
     border: 2px ridge #1578bd;
@@ -73,6 +73,11 @@ a:visited {
 
 a:hover {
     color: #000000;
+}
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
 }
 
 

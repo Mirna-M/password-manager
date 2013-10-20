@@ -1,7 +1,7 @@
 body {
     background-image: url('../images/login_background_repeatx.jpg');
     background-repeat: repeat-x;
-    font-family: Ubuntu;
+    font-family: Ubuntu, Arial, sans-serif;
     font-size: 16px;
 }
 
@@ -35,6 +35,8 @@ div#register_wrraper form input#first_line {
 }
 
 div#register_wrraper form input {
+    font-family: Ubuntu, Arial, sans-serif;
+    font-size: 16px;
     color: #1D3546;
     text-align: center;
     border: 2px ridge #1578bd;
@@ -56,7 +58,7 @@ div#register_wrraper form input[type="password"] {
 div#register_wrraper form input[type="submit"] {
     width: 80px;
     height: 40px;
-    background-image: url('../images/button.jpg');
+    background-image: url('../images/button_hover1.jpg');
 }
 
 div#register_wrraper form input[type="submit"]:hover {
@@ -78,5 +80,10 @@ a#login:visited {
 
 a#login:hover {
     color: #000000;
+}
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
 }
 

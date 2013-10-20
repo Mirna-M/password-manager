@@ -4,6 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" media="screen" href="css/user_data_style.css"/>
         <title>Password Manager</title>
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <script type='text/javascript' src='js/jquery-1.10.2.js'></script>
         <script type='text/javascript' src='js/script.js'></script>
     </head>
