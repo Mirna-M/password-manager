@@ -20,21 +20,20 @@
                     <input id="button" type="submit" value="Register!">
                 </form>
             </div>
-                <?php
-                if(isset($this->message)) {
-                ?>
-                    <div class="warning_image">
-                    <img src="images/warning_blue_high_contrast.png" >
-                    </div>
-                    <div class="message">
-                        <?php
-                        echo $this->message;
-                        ?>
-                    </div>
-                <?php
-                }
-                ?>
-            </div>
+            <?php
+            if(isset($this->message)) {
+            ?>
+                <div class="warning_image">
+                <img src="images/warning_blue_high_contrast.png" >
+                </div>
+                <div class="message">
+                    <?php
+                    echo $this->message;
+                    ?>
+                </div>
+            <?php
+            }
+            ?>
         </div>
     </body>
 </html>
